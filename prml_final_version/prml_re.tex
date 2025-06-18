@@ -364,6 +364,7 @@
     \begin{cnabstract}\normalsize 
         本文为笔者模式识别与机器学习的大作业。\par
         望老师批评指正。\par
+        GitHub 仓库地址：\url{https://github.com/ccwwyz/PRML_UCAS_FINAL}\par
         \vspace{1cm}
         分工如下表所示：
         \begin{center}
@@ -501,27 +502,7 @@ Types, Components \& Key Algorithms》
 （\href{https://www.upgrad.com/blog/neural-network-architecture-components-algorithms/}{链接}），
 未来的研究可能进一步优化轻量级网络（如MobileNet）以适应移动设备。
 
-\subsubsection{关键引用}
-\begin{itemize}
-    \item GeeksforGeeks Neural Networks Beginner's Guide: \\
-          \url{https://www.geeksforgeeks.org/neural-networks-a-beginners-guide/}
-    \item V7Labs Essential Guide to Neural Network Architectures: \\
-          \url{https://www.v7labs.com/blog/neural-network-architectures-guide/}
-    \item Wikipedia Neural Network Machine Learning: \\
-          \url{https://en.wikipedia.org/wiki/Neural_network_(machine_learning)}
-    \item MyGreatLearning Types of Neural Networks Definition: \\
-          \url{https://www.mygreatlearning.com/blog/types-of-neural-networks/}
-    \item UpGrad Neural Network Architecture Components Algorithms: \\
-          \url{https://www.upgrad.com/blog/neural-network-architecture-components-algorithms/}
-    \item V7Labs Convolutional Neural Networks Guide: \\
-          \url{https://www.v7labs.com/blog/convolutional-neural-networks-guide/}
-    \item V7Labs Recurrent Neural Networks Guide: \\
-          \url{https://www.v7labs.com/blog/recurrent-neural-networks-guide/}
-    \item Attention Is All You Need Transformer Paper: \\
-          \url{https://arxiv.org/abs/1706.03762}
-    \item Generative Adversarial Networks NIPS Paper: \\
-          \url{https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf}
-\end{itemize}
+
 
 \cleardoublepage
 
@@ -567,9 +548,9 @@ Types, Components \& Key Algorithms》
 \cleardoublepage
 
 
-\section{CNN Training results on CIFAR-10 Dataset}  
+\section{卷积神经网络在CIFAR-10数据集上的训练结果}  
 
-\subsection{CNN training code on CIFAR-10 dataset}
+\subsection{卷积神经网络在CIFAR-10数据集上的训练代码}
 \begin{lstlisting}[language=python, caption={神经网络CNN训练（纯手写）}, label={lst:cnn_train_handwritten}]
 import torch
 import torch.nn as nn
@@ -759,7 +740,7 @@ if __name__ == '__main__':
 \end{lstlisting}
 
 
-\subsection{CNN training results on CIFAR-10 dataset}
+\subsection{卷积神经网络在CIFAR-10数据集上的训练结果}
 
 
 \begin{figure}[H]
@@ -928,22 +909,7 @@ The 90\% accuracy reflects effective use of CNNs, augmented by data preprocessin
 
 This implementation underscores CNNs’ power for image classification and provides a foundation for further exploration in computer vision tasks.
 
-\begin{thebibliography}{9}
-\bibitem{cifar10}
-A. Krizhevsky, ``Learning Multiple Layers of Features from Tiny Images,'' 2009.
 
-\bibitem{relu}
-V. Nair and G. E. Hinton, ``Rectified Linear Units Improve Restricted Boltzmann Machines,'' \textit{ICML}, 2010.
-
-\bibitem{batchnorm}
-S. Ioffe and C. Szegedy, ``Batch Normalization: Accelerating Deep Network Training,'' \textit{arXiv:1502.03167}, 2015.
-
-\bibitem{dropout}
-N. Srivastava et al., ``Dropout: A Simple Way to Prevent Neural Networks from Overfitting,'' \textit{JMLR}, vol. 15, 2014.
-
-\bibitem{resnet}
-K. He et al., ``Deep Residual Learning for Image Recognition,'' \textit{CVPR}, 2016.
-\end{thebibliography}
 
 
 
@@ -1213,28 +1179,70 @@ print(f'Test Accuracy: {100 * correct / total}\%')
 % Summarizing findings
 ResNet-110 excels in training from scratch on CIFAR-10 (93.57\% accuracy, low computational cost). Pretrained ViT models, especially ViT-H/14 fine-tuned from JFT-300M (99.50\%), outperform ResNet (BiT-L, 99.37\%). Model choice depends on data scale and resources: ResNet suits limited data/resources, while ViT excels with large-scale pretraining. Code implementations are provided for reproducibility.
 
+
+\addcontentsline{toc}{chapter}{参考文献}
 \begin{thebibliography}{9}
-% Listing references
-\bibitem{he2016deep}
-K. He, X. Zhang, S. Ren, and J. Sun, ``Deep Residual Learning for Image Recognition,'' \textit{arXiv:1512.03385}, 2016.
+
+\bibitem{cifar10}
+A. Krizhevsky, ``Learning Multiple Layers of Features from Tiny Images,'' Technical Report, 2009.
 
 \bibitem{dosovitskiy2020image}
-A. Dosovitskiy et al., ``An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,'' \textit{arXiv:2010.11929}, 2020.
+A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, J. Uszoreit, and N. Houlsby, ``An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,'' \textit{arXiv:2010.11929}, 2020.
 
-\bibitem{omihub777vitcifar}
-ViT-CIFAR Repository, \url{https://github.com/omihub777/ViT-CIFAR}.
+\bibitem{geeksforgeeks}
+GeeksforGeeks, ``Neural Networks: A Beginner's Guide,'' \url{https://www.geeksforgeeks.org/neural-networks-a-beginners-guide/}, Accessed: 2025.
+
+\bibitem{goodfellow2014generative}
+I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, ``Generative Adversarial Networks,'' \textit{Advances in Neural Information Processing Systems}, 2014, \url{https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf}.
+
+\bibitem{he2016deep}
+K. He, X. Zhang, S. Ren, and J. Sun, ``Deep Residual Learning for Image Recognition,'' \textit{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, 2016, \url{https://arxiv.org/abs/1512.03385}.
+
+\bibitem{batchnorm}
+S. Ioffe and C. Szegedy, ``Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,'' \textit{arXiv:1502.03167}, 2015.
 
 \bibitem{kentaroy47vit}
-vision-transformers-cifar10 Repository, \url{https://github.com/kentaroy47/vision-transformers-cifar10}.
+Kentaroy47, ``Vision Transformers for CIFAR-10,'' GitHub Repository, \url{https://github.com/kentaroy47/vision-transformers-cifar10}, Accessed: 2025.
 
-\bibitem{sidthoviti}
-Fine-Tuning ResNet50 Pretrained on ImageNet for CIFAR-10, \url{https://github.com/sidthoviti/Fine-Tuning-ResNet50-Pretrained-on-ImageNet-for-CIFAR-10}.
+\bibitem{mygreatlearning}
+MyGreatLearning, ``Types of Neural Networks Definition,'' \url{https://www.mygreatlearning.com/blog/types-of-neural-networks/}, Accessed: 2025.
 
-\bibitem{lightningvit}
-PyTorch Lightning, ``Fine-tuning Vision Transformer on CIFAR-10,'' \url{https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/VisionTransformer/Fine_tuning_the_Vision_Transformer_on_CIFAR_10_with_PyTorch_Lightning.ipynb}.
+\bibitem{relu}
+V. Nair and G. E. Hinton, ``Rectified Linear Units Improve Restricted Boltzmann Machines,'' \textit{Proceedings of the International Conference on Machine Learning (ICML)}, 2010.
+
+\bibitem{omihub777vitcifar}
+Omihub777, ``ViT-CIFAR Repository,'' GitHub Repository, \url{https://github.com/omihub777/ViT-CIFAR}, Accessed: 2025.
 
 \bibitem{pytorchforum}
-PyTorch Forum, ``ResNet with CIFAR10 only reaches 86\% accuracy,'' \url{https://discuss.pytorch.org/t/resnet-with-cifar10-only-reaches-86-accuracy-expecting-90/135051}.
+PyTorch Forum, ``ResNet with CIFAR10 Only Reaches 86\% Accuracy,'' Discussion Thread, \url{https://discuss.pytorch.org/t/resnet-with-cifar10-only-reaches-86-accuracy-expecting-90/135051}, Accessed: 2025.
+
+\bibitem{lightningvit}
+PyTorch Lightning, ``Fine-tuning Vision Transformer on CIFAR-10,'' Google Colab Notebook, \url{https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/VisionTransformer/Fine_tuning_the_Vision_Transformer_on_CIFAR_10_with_PyTorch_Lightning.ipynb}, Accessed: 2025.
+
+\bibitem{sidthoviti}
+Sidthoviti, ``Fine-Tuning ResNet50 Pretrained on ImageNet for CIFAR-10,'' GitHub Repository, \url{https://github.com/sidthoviti/Fine-Tuning-ResNet50-Pretrained-on-ImageNet-for-CIFAR-10}, Accessed: 2025.
+
+\bibitem{dropout}
+N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, and R. Salakhutdinov, ``Dropout: A Simple Way to Prevent Neural Networks from Overfitting,'' \textit{Journal of Machine Learning Research}, vol. 15, pp. 1929--1958, 2014.
+
+\bibitem{upgrad}
+UpGrad, ``Neural Network Architecture Components Algorithms,'' \url{https://www.upgrad.com/blog/neural-network-architecture-components-algorithms/}, Accessed: 2025.
+
+\bibitem{v7labscnn}
+V7Labs, ``Convolutional Neural Networks Guide,'' \url{https://www.v7labs.com/blog/convolutional-neural-networks-guide/}, Accessed: 2025.
+
+\bibitem{v7labsnn}
+V7Labs, ``Essential Guide to Neural Network Architectures,'' \url{https://www.v7labs.com/blog/neural-network-architectures-guide/}, Accessed: 2025.
+
+\bibitem{v7labsrnn}
+V7Labs, ``Recurrent Neural Networks Guide,'' \url{https://www.v7labs.com/blog/recurrent-neural-networks-guide/}, Accessed: 2025.
+
+\bibitem{vaswani2017attention}
+A. Vaswani, N. Shazeer, N. Parmar, J. Uszoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, ``Attention Is All You Need,'' \textit{arXiv:1706.03762}, 2017, \url{https://arxiv.org/abs/1706.03762}.
+
+\bibitem{wikipedia}
+Wikipedia, ``Neural Network (Machine Learning),'' \url{https://en.wikipedia.org/wiki/Neural_network_(machine_learning)}, Accessed: 2025.
+
 \end{thebibliography}
 
 \chapter{非线性方法分类器}
@@ -1752,39 +1760,7 @@ f(\mathbf{x}) = \text{sign}\left(\sum_{i=1}^{n}\alpha_i y_i K(\mathbf{x}_i, \mat
 核支持向量机作为经典的非线性分类方法，在理论完备性和实践有效性之间取得了良好平衡。虽然在大规模数据处理方面面临挑战，但其在中小规模、高维数据的分类任务中仍具有不可替代的价值。通过合理的核函数选择和参数调优，核SVM能够在复杂的非线性分类问题中取得优异的性能表现。
 
 
-\begin{thebibliography}{99}
 
-\bibitem{cortes1995support}
-C. Cortes and V. Vapnik, ``Support-vector networks,'' \textit{Machine Learning}, vol. 20, no. 3, pp. 273--297, 1995.
-
-\bibitem{vapnik1998statistical}
-V. N. Vapnik, \textit{Statistical Learning Theory}. New York: Wiley, 1998.
-
-\bibitem{scholkopf2002learning}
-B. Schölkopf and A. J. Smola, \textit{Learning with Kernels: Support Vector Machines, Regularization, Optimization, and Beyond}. MIT Press, 2002.
-
-\bibitem{quinlan1986induction}
-J. R. Quinlan, ``Induction of decision trees,'' \textit{Machine Learning}, vol. 1, no. 1, pp. 81--106, 1986.
-
-\bibitem{breiman1984classification}
-L. Breiman, J. Friedman, C. J. Stone, and R. A. Olshen, \textit{Classification and Regression Trees}. CRC Press, 1984.
-
-\bibitem{breiman2001random}
-L. Breiman, ``Random forests,'' \textit{Machine Learning}, vol. 45, no. 1, pp. 5--32, 2001.
-
-\bibitem{breiman1996bagging}
-L. Breiman, ``Bagging predictors,'' \textit{Machine Learning}, vol. 24, no. 2, pp. 123--140, 1996.
-
-\bibitem{bishop2006pattern}
-C. M. Bishop, \textit{Pattern Recognition and Machine Learning}. Springer, 2006.
-
-\bibitem{hastie2009elements}
-T. Hastie, R. Tibshirani, and J. Friedman, \textit{The Elements of Statistical Learning: Data Mining, Inference, and Prediction}. Springer, 2009.
-
-\end{thebibliography}
-
-
-\newpage
 
 \section{决策树分类器在CIFAR-10数据集上的表现}
 
@@ -2609,6 +2585,37 @@ truck & 0.563 & 0.542 & 0.552 \\
 这些发现为传统机器学习方法的应用和改进提供了重要指导，同时也为理解现代深度学习方法的优势提供了有价值的对比基准。
 
 
+\addcontentsline{toc}{chapter}{参考文献}
+\begin{thebibliography}{99}
+
+\bibitem{cortes1995support}
+C. Cortes and V. Vapnik, ``Support-vector networks,'' \textit{Machine Learning}, vol. 20, no. 3, pp. 273--297, 1995.
+
+\bibitem{vapnik1998statistical}
+V. N. Vapnik, \textit{Statistical Learning Theory}. New York: Wiley, 1998.
+
+\bibitem{scholkopf2002learning}
+B. Schölkopf and A. J. Smola, \textit{Learning with Kernels: Support Vector Machines, Regularization, Optimization, and Beyond}. MIT Press, 2002.
+
+\bibitem{quinlan1986induction}
+J. R. Quinlan, ``Induction of decision trees,'' \textit{Machine Learning}, vol. 1, no. 1, pp. 81--106, 1986.
+
+\bibitem{breiman1984classification}
+L. Breiman, J. Friedman, C. J. Stone, and R. A. Olshen, \textit{Classification and Regression Trees}. CRC Press, 1984.
+
+\bibitem{breiman2001random}
+L. Breiman, ``Random forests,'' \textit{Machine Learning}, vol. 45, no. 1, pp. 5--32, 2001.
+
+\bibitem{breiman1996bagging}
+L. Breiman, ``Bagging predictors,'' \textit{Machine Learning}, vol. 24, no. 2, pp. 123--140, 1996.
+
+\bibitem{bishop2006pattern}
+C. M. Bishop, \textit{Pattern Recognition and Machine Learning}. Springer, 2006.
+
+\bibitem{hastie2009elements}
+T. Hastie, R. Tibshirani, and J. Friedman, \textit{The Elements of Statistical Learning: Data Mining, Inference, and Prediction}. Springer, 2009.
+
+\end{thebibliography}
 
 
 
@@ -3525,6 +3532,7 @@ Boosting算法在传统机器学习中表现卓越，但在CIFAR-10图像分类�
 
 
 
+\addcontentsline{toc}{chapter}{参考文献}
 \begin{thebibliography}{99}
     \bibitem{chen2016xgboost} Chen, T., \& Guestrin, C. (2016). XGBoost: A scalable tree boosting system. \textit{Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}, 785-794.
     \bibitem{ke2017lightgbm} Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., ... \& Liu, T. Y. (2017). LightGBM: A highly efficient gradient boosting decision tree. \textit{Advances in Neural Information Processing Systems}, 30.
@@ -3539,7 +3547,7 @@ Boosting算法在传统机器学习中表现卓越，但在CIFAR-10图像分类�
 \end{thebibliography}
 
 
-
+\newpage
 \section*{附录：Boosting核心代码结构}
 \textbf{特征提取核心代码 (data\_preprocessing.py)}：
 \begin{lstlisting}[language=Python, caption={简化的多维特征提取与拼接过程}]
@@ -3670,12 +3678,12 @@ def run_complete_training_pipeline(args):
 
 \chapter{总结陈述}
 
-上面的报告一共有79页，包含了神经网络，非线性分类器，Boosting算法在CIFAR-10数据集上的表现以及类内和类间的对比。
+报告一共有79页，包含了神经网络，非线性分类器，Boosting算法在CIFAR-10数据集上的表现以及类内和类间的对比。
 
 例如：
 \begin{itemize}
-    \item 神经网络中CNN, ResNet-18, ResNet-50, VGG-16，ViT等模型的表现;
-    \item 非线性分类器中KNN, SVM, 决策树, 随机森林的表现;
+    \item 神经网络中CNN, ResNet, VGG-16，ViT等模型的表现;
+    \item 非线性分类器中SVM, 决策树, 随机森林（决策树的衍生）的表现;
     \item 以及Boosting算法中XGBoost, LightGBM, CatBoost的表现。
 \end{itemize}
 
